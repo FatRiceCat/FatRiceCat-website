@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+  
+  {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+
+      margin: 0;
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Times New Roman', sans-serif;
+      
+	  
+    }
+	
+	html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+}
+	
+	nav {
+           
+            background-color: #D44E4E;
+            padding: 15px 30px;
+            text-align: center;
+            border-bottom: 2px solid #444;
+			display: flex;
+            justify-content: center;
+			position: sticky;   
+            top: 0;  
+            width: 98%;			
+            z-index: 1000;    
+	
+        }
+
+        
+		
+    .navdiv {
+             display: flex;
+             width: 100%;
+             justify-content: center; 
+             align-items: center;
+    }
+
+    .logo {
+             font-size: 24px;
+             font-weight: bold;
+             color: #b8b8b8;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;  
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color:#FFB800;
+            transform: scale(1.1);
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color:#D44E4E;
+            transition: width 0.3s, left 0.3s;
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+            left: 0;
+        }
+
+        .gallery {
+     background-color: white; 
+      position: relative;
+      width: 40%;
+      max-width: 400px;
+      height: 500px;       
+      margin: 50px auto;
+      border: 2px solid #333;
+      overflow: hidden;    
+    }
+
+    .gallery img {
+      width: 100%;         
+      height: 100%;        
+      object-fit: cover;   
+      display: none;      
+      transition: opacity 1s ease-in-out; 
+    }
+
+    .gallery img.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .prev, .next {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+     .home-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/The%20big%203.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+}
+
+.home-section::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+}
+
+.home-background {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  height: 100%; 
+}
+
+.left-content {
+  position: relative;
+  z-index: 2;
+  color:white;
+  text-align: center;
+  padding: 350px;
+  max-width: 600px;
+}  
+
+    .background {
+      position: relative;
+      width: 100%;
+      height: 140vh;
+      background-image: url("file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/fat%20rice%20cat.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-blend-mode: lighten;
+    }
+
+    .background::before {
+      content: "";
+      position: absolute;
+      inset: 0px; 
+      background-color: rgba(0, 0, 0, 0.5); 
+      z-index: 1;
+    }
+	
+	h1 {
+	    font-weight: normal;
+	}
+	
+	 p {
+      padding: 10px 20px; 
+    }
+
+    .content {
+      position: relative;
+	  flex-direction: column;
+      z-index: 2;
+	  gap: 1px;
+	  justify-content: flex-start;
+	  padding-top: 20px;
+	  padding: 20px;
+      color: white;
+      text-align: center;
+	 
+    }
+
+.profile-image {
+width: auto; /* Adjust the size here */
+height: 230px; /* Maintains aspect ratio */
+}
+	
+    .second-section {
+	  position: relative;
+      width: 100%;
+      height: 150vh;
+      background-image: url("file:///C:/Users/USER/Downloads/Raj_notepad++/Raj_notepad++/Pinocchio(2).jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-blend-mode: lighten;
+     
+    } 
+	 
+	 .second-section::before {
+      content: "";
+      position: absolute;
+      inset: 0px; 
+      background-color: rgba(0, 0, 0, 0.5); 
+      z-index: 1;
+    }
+	
+
+    h2 {
+      font-weight: normal;
+    }
+
+    .content {
+	  position: relative;
+	  flex-direction: column;
+      z-index: 2;
+	  gap: 1px;
+	  justify-content: flex-start;
+	  padding-top: 20px;
+	  padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    .school-section {
+	  position: relative;
+      width: 100%;
+      height: 84vh;
+      background-image: url("file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/before%20the%20great%20cut.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-blend-mode: lighten;
+     
+    } 
+	 
+	 .school-section::before {
+      content: "";
+      position: absolute;
+      inset: 0px; 
+      background-color: rgba(0, 0, 0, 0.5); 
+      z-index: 1;
+    }
+	
+
+    h2 {
+      font-weight: normal;
+    }
+
+    .content {
+	  position: relative;
+	  flex-direction: column;
+      z-index: 2;
+	  gap: 1px;
+	  justify-content: flex-start;
+	  padding-top: 20px;
+	  padding: 20px;
+      color: white;
+      text-align: center;
+    }
+	
+	 .third-section {
+	  position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url("file:///C:/Users/USER/Downloads/Raj_notepad++/Raj_notepad++/1330609.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-blend-mode: lighten;
+     
+    } 
+	 
+	 .third-section::before {
+      content: "";
+      position: absolute;
+      inset: 0px; 
+      background-color: rgba(0, 0, 0, 0.5); 
+      z-index: 1;
+    }
+	
+
+    h3 {
+      font-weight: normal;
+    }
+
+    .content {
+	  position: relative;
+	  flex-direction: column;
+      z-index: 2;
+	  justify-content: flex-start;
+	  padding-top: 20px;
+	  padding: 20px;
+      color: white;
+      text-align: center;
+	    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    }
+	
+	.third-section .content {
+    display: flex;
+    flex-direction: column;
+    align-items: ;
+    gap: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;  
+    gap: 20px;   
+}
+
+.combat-image {
+    width: 33%;  
+    border-radius: 8px;
+    object-fit: cover;  
+	text-align: justify;
+}
+
+  </style>
+</head>
+<body>
+   
+  <header>
+    <h1>Welcome to my Webpage</h1>
+  <nav class="navbar">
+      <div class="navdiv">
+        <ul>
+            <li><a href="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/Home.html">Home</a></li>
+            <li><a href="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/Profile-ict.html">Profile</a></li>
+            <li><a href="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/Family-ict.html">Family</a></li>
+            <li><a href="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/School%20life-ict.html">School Life</a></li>
+            <li><a href="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/Specialization-ict.html">Specialization</a></li>
+        </ul>
+       
+    </nav>
+	
+	 <div class="home-section" id="Home">
+  <div class="home-background">
+    <div class="left-content">
+      <h1 style="font-size: 50px;">About the webpage</h1>
+      <p style="font-size: 20px;">
+        This webpage is about me and what my life in junior highschool was,
+		    this webpage will serve as a memory that i can look back on.
+      </p>
+    </div>
+  </div>
+</div>
+	 
+	
+	 <div id="Overview" class="background">
+    <div class="content">
+        <h1 style="font-size: 50px;"><center><big>Profile</big></center></h1>
+        <p style="font-size: 28px;">This part of the webpage will be dedicated to my profile.I am Raj Godwin E. Baldeviso, I am a student of Antique National School.I will keep this pretty simple due to me being a pretty mundane person,I am into art and specifically traditional art because i like the feel that the pencil and brush have, although i know that digital art now has tools that make it so you feel like your painting/drawing traditionally on a tablet, theres just a different feeling a physical pencil/brush has that i cant really pinpoint to what it is.
+                                    As for my other interest,It would be video games,Video games have played a pretty substantial roll in my life as it has shaped a part of my personality and how i tackle certain obstacles in life,And as for the games i like, i like turnbased games,action games,souls like games,metroidvania games and platformgames.
+        </p>
+        <center><img src="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/iron%20fist.jpg" class="profile-image"></center>
+    </div>
+  </div>
+  
+<div id="Lore" class="second-section">
+  <div class="content" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <h2 style="font-size: 50px;"><big>Family</big></h2>
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; width: 100%;">
+
+      <div style="flex: 1; max-width: 60%; text-align: left;">
+        <span style="font-size: 20px;">family is what makes and builds the personality of a person and that goes the same with me,my family have been through thick and thin and no matter what,they always comeback from any situation or problem,that is where i got my resilience and perserverence from.
+            my mom is your typical strict but loving mom, I appreciate all that she has taught me,being manners,life lessons and basic human decency,</span>
+        <span style="font-size: 20px;">My dad plays the same role as ourt mom but hes more into physical activities such as biking,farming and so on, as for my gradparents, my grandma is your caring,loving and understanding grandma, and always takes my side and tries to understand me and i love her for that,as for my grandpa he used to be your hardcore militaryman for example he would yell at me when i cried because it was a sign of weakness but he has become more understanding of emotions and just like my grandma he would try to understand my situation whenever my parents and i argue
+            he also teaches me how to do handywork such as how to fix simple stuff,how to use tools and he has shaped my personality to be more independent.</span><p>
+        </p> 
+        <h2 style="font-size: 50px;"><center><big>Siblings</big></center></h2>
+        <span style="font-size: 20px;">i have 2 siblings,them being my older sister,Rengee Gwyneth and twin brother,Rue Grant,they both are one of my biggest supporters and have helped me throughout school.my sister is currently working on being a seafarer,I am proud that she is my sister and all the amazing things that she has achieved,althought we may fight a lot, i know that are connection as siblings outweigh all of it.
+        and as for my brother,he can be a hard head sometimes but me and him make a pretty good duo as when were studying we have twice the brainpower.they are the best siblings that i could ask for and i am luck to have them.</span>
+        
+      </div>
+
+      <div style="flex: 1; max-width: 35%; display: flex; flex-direction: column; gap: 20px; position: relative; z-index: 2;">
+        
+        <div style="margin-top: -100px;">
+          <img class="topimage" src="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/mama%20and%20papa.jpg" alt="Lore Image 1" style="width: 60%; border-radius: 8px;">
+        </div>
+        
+        <div style="margin-top: -1px;">
+          <img src="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/older%20sis.jpg" alt="Lore Image 2" style="width: 60%; border-radius: 8px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="School Life" class="school-section">
+    <div class="content">
+        <h1 style="font-size: 50px;"><center><big>Profile</big></center></h1>
+        <p style="font-size: 28px;">This part of the webpage will be dedicated to my profile.I am Raj Godwin E. Baldeviso, I am a student of Antique National School.I will keep this pretty simple due to me being a pretty mundane person,I am into art and specifically traditional art because i like the feel that the pencil and brush have, although i know that digital art now has tools that make it so you feel like your painting/drawing traditionally on a tablet, theres just a different feeling a physical pencil/brush has that i cant really pinpoint to what it is.
+                                    As for my other interest,It would be video games,Video games have played a pretty substantial roll in my life as it has shaped a part of my personality and how i tackle certain obstacles in life,And as for the games i like, i like turnbased games,action games,souls like games,metroidvania games and platformgames.
+        </p>
+    </div>
+
+<div class="gallery-header"></div></color><big><center>MY ARTWORKS</center></big></div>
+<div id="Overview" class="gallery">
+
+  <img src="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/jolly%20and%20tatus.jpg" class="active" alt="Artwork 1">
+  <img src="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/dulungan.jpg" alt="Artwork 2">
+  <img src="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/woman%20holding%20a%20pot.jpg" alt="Artwork 3">
+  <img src="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/oil%20painting%20of%20fruits%20and%20wine.jpg" alt="Artwork 4">
+  <img src="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/white%20rooster.jpg" alt="Artwork 5">
+
+
+  <div class="controls">
+    <button class="prev">←</button>
+    <button class="next">→</button>
+  </div>
+</div>
+  
+<footer style="background-color:#D44E4E; color: black; text-align: center; padding: 15px 20px; position: relative; bottom: 0; width: 100%; font-size: 16px; border-top: 2px solid #444;">
+    <div class="footer-content">
+      <h4></h4>&copy; 2025 Fat Rice Cat. All Rights Reserved.</h4>
+      <h4>Creator of webpage: Raj Godwin</h4>
+     
+</footer>
+
+<script>
+  const images = document.querySelectorAll('.gallery img');
+  let currentIndex = 0;
+
+  const showImage = (index) => {
+    // Fade out the current image
+    images[currentIndex].classList.remove('active');
+    images[currentIndex].style.opacity = 0;
+    
+    // Update the index and show the new image
+    currentIndex = (index + images.length) % images.length;
+    images[currentIndex].classList.add('active');
+    images[currentIndex].style.opacity = 1;
+  };
+
+  const nextImage = () => {
+    showImage(currentIndex + 1);
+  };
+
+  const prevImage = () => {
+    showImage(currentIndex - 1);
+  };
+
+  document.querySelector('.next').addEventListener('click', nextImage);
+  document.querySelector('.prev').addEventListener('click', prevImage);
+</script>
+
+</body>
+</html>

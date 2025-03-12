@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpage about my life and school</title>
+  <style>
+
+{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+
+      margin: 0;
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Times New Roman', sans-serif;
+      
+	  
+    }
+	
+	html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+}
+	
+	nav {
+           
+            background-color: #D44E4E;
+            padding: 15px 30px;
+            text-align: center;
+            border-bottom: 2px solid #444;
+			display: flex;
+            justify-content: center;
+			position: sticky;   
+            top: 0;  
+            width: 98%;			
+            z-index: 1000;    
+	
+        }
+
+        
+		
+    .navdiv {
+             display: flex;
+             width: 100%;
+             justify-content: center; 
+             align-items: center;
+    }
+
+    .logo {
+             font-size: 24px;
+             font-weight: bold;
+             color: #b8b8b8;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;  
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color:#FFB800;
+            transform: scale(1.1);
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color:#D44E4E;
+            transition: width 0.3s, left 0.3s;
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+            left: 0;
+        }
+
+     
+..second-section {
+	  position: relative;
+      width: 100%;
+      height: 150vh;
+      background-image: url("file:///C:/Users/USER/Downloads/Raj_notepad++/Raj_notepad++/Pinocchio(2).jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-blend-mode: lighten;
+     
+    } 
+	 
+	 .second-section::before {
+      content: "";
+      position: absolute;
+      inset: 0px; 
+      background-color: rgba(0, 0, 0, 0.5); 
+      z-index: 1;
+    }
+	
+
+    h2 {
+      font-weight: normal;
+    }
+
+    .content {
+	  position: relative;
+	  flex-direction: column;
+      z-index: 2;
+	  gap: 1px;
+	  justify-content: flex-start;
+	  padding-top: 20px;
+	  padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to my Webpage</h1>
+  <nav class="navbar">
+      <div class="navdiv">
+		<div class="logo" style="color: #C0C0C0; font-size: 30px; font-weight: normal;"></div>
+        <ul>
+            <li><a href="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/Home.html">Home</a></li>
+            <li><a href="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/Profile-ict.html">Profile</a></li>
+            <li><a href="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/Family-ict.html">Family</a></li>
+            <li><a href="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/School%20life-ict.html">School Life</a></li>
+            <li><a href="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/Specialization-ict.html">Specialization</a></li>
+
+        </ul>
+       
+    </nav>
+	
+    
+	 
+	
+    <div id="Lore" class="second-section">
+      <div class="content" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <h2 style="font-size: 50px;"><big>Family</big></h2>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; width: 100%;">
+    
+          <div style="flex: 1; max-width: 60%; text-align: left;">
+            <span style="font-size: 20px;">family is what makes and builds the personality of a person and that goes the same with me,my family have been through thick and thin and no matter what,they always comeback from any situation or problem,that is where i got my resilience and perserverence from.
+                my mom is your typical strict but loving mom, I appreciate all that she has taught me,being manners,life lessons and basic human decency,</span>
+            <span style="font-size: 20px;">My dad plays the same role as ourt mom but hes more into physical activities such as biking,farming and so on, as for my gradparents, my grandma is your caring,loving and understanding grandma, and always takes my side and tries to understand me and i love her for that,as for my grandpa he used to be your hardcore militaryman for example he would yell at me when i cried because it was a sign of weakness but he has become more understanding of emotions and just like my grandma he would try to understand my situation whenever my parents and i argue
+                he also teaches me how to do handywork such as how to fix simple stuff,how to use tools and he has shaped my personality to be more independent.</span><p>
+            </p> 
+            <h2 style="font-size: 50px;"><center><big>Siblings</big></center></h2>
+            <span style="font-size: 20px;">i have 2 siblings,them being my older sister,Rengee Gwyneth and twin brother,Rue Grant,they both are one of my biggest supporters and have helped me throughout school.my sister is currently working on being a seafarer,I am proud that she is my sister and all the amazing things that she has achieved,althought we may fight a lot, i know that are connection as siblings outweigh all of it.
+            and as for my brother,he can be a hard head sometimes but me and him make a pretty good duo as when were studying we have twice the brainpower.they are the best siblings that i could ask for and i am luck to have them.</span>
+            
+          </div>
+    
+          <div style="flex: 1; max-width: 35%; display: flex; flex-direction: column; gap: 20px; position: relative; z-index: 2;">
+            
+            <div style="margin-top: -100px;">
+              <img class="topimage" src="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/mama%20and%20papa.jpg" alt="Lore Image 1" style="width: 60%; border-radius: 8px;">
+            </div>
+            
+            <div style="margin-top: -1px;">
+              <img src="file:///C:/Users/Glady/Downloads/Raj_notepad++-20250309T135225Z-001/Raj_notepad++/Raj_notepad++/School%20life%20webpage/older%20sis.jpg" alt="Lore Image 2" style="width: 60%; border-radius: 8px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  <footer style="background-color:#D44E4E; color: black; text-align: center; padding: 15px 20px; position: relative; bottom: 0; width: 100%; font-size: 16px; border-top: 2px solid #444;">
+  <div class="footer-content">
+    <h4></h4>&copy; 2025 Fat Rice Cat. All Rights Reserved.</h4>
+    <h4>Creator of webpage: Raj Godwin</h4>
+     
+</footer>
+
+</body>
+</html>
